@@ -7,13 +7,10 @@ const BottomRow = () => {
 
   const quarter = 0;
   const [qrtr, setQrtr] = useState(quarter);
-
   const down = 1;
   const [dwn, setDwn] = useState(down);
-
   const toGo = 10;
   const [changeToGo, setChangeToGo] = useState(toGo);
-
   const ballOn = 50;
   const [changeBallOn, setChangeBallOn] = useState(ballOn);
 
