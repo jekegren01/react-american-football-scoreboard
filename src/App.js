@@ -12,7 +12,6 @@ function App() {
   const awayScore = 0;
   const [aScore, setAScore] = useState(awayScore);
 
-
   return (
     <div className="container">
       <section className="scoreboard">

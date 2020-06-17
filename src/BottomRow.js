@@ -11,6 +11,12 @@ const BottomRow = () => {
   const down = 1;
   const [dwn, setDwn] = useState(down);
 
+  const toGo = 10;
+  const [changeToGo, setChangeToGo] = useState(toGo);
+
+  const ballOn = 50;
+  const [changeBallOn, setChangeBallOn] = useState(ballOn);
+
 
   return (
     <div className="bottomRow">
@@ -21,12 +27,16 @@ const BottomRow = () => {
         <button className="buttons" onClick={() => setDwn(0)}>Reset</button>
       </div>
       <div className="toGo">
-        <h3 className="toGo__title">To Go</h3>
-        <div className="toGo__value">7</div>
+        <h3 className="toGo__title">ToGo</h3>
+        <div className="toGo__value">{changeToGo}</div>
+        <button className="buttons" onClick = {() => setChangeToGo(changeToGo + 1)}>+</button>
+        <button className="buttons" onClick = {() => setChangeToGo(changeToGo - 1)}>-</button>
       </div>
       <div className="ballOn">
         <h3 className="ballOn__title">Ball on</h3>
-        <div className="ballOn__value">21</div>
+        <div className="ballOn__value">{changeBallOn}</div>
+        <button className="buttons" onClick = {() => setChangeBallOn(changeBallOn + 1)}>+</button>
+        <button className="buttons" onClick = {() => setChangeBallOn(changeBallOn - 1)}>-</button>
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
