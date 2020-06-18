@@ -12,9 +12,6 @@ function Timer() {
       if (seconds !== 0) {
         setTimeout(() => newSeconds(seconds - 1),
           1000)
-          // if (seconds < 10) {
-          //   newSeconds(`0  ${seconds - 1}`)
-          // }
           if (minutes < 0) {
             newMinutes(minutes = 15)
             newSeconds(seconds = 0)
@@ -28,7 +25,8 @@ function Timer() {
     return (
         <div>
             <div className="timer">{minutes}:{seconds<10?(`0${seconds}`) : seconds }</div>
-             <button className="buttons" onClick={() => setTimerOn(timerOn == !setTimerOn)}> Start </button>
+             <button className="buttons" onClick={() => setTimerOn(timerOn == !setTimerOn)}> Start/Stop </button>
+             <button className="buttons" onClick={() => (newMinutes(15), newSeconds(0))}>Reset</button>
         </div>
     );
   }
