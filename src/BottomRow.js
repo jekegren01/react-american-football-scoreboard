@@ -33,7 +33,9 @@ const BottomRow = () => {
         <h3 className="ballOn__title">Ball on</h3>
         <div className="ballOn__value">{changeBallOn}</div>
         <button className="buttons" onClick = {() => setChangeBallOn(changeBallOn + 1)}>+</button>
-        <button className="buttons" onClick = {() => setChangeBallOn(changeBallOn - 1)}>-</button>
+        <button className="buttons" onClick = {() => setChangeBallOn(changeBallOn - 1)}>+</button>
+        {/* <button className="buttons" onClick = {() => setChangeBallOn(changeBallOn + 10)}>+10</button>
+        <button className="buttons" onClick = {() => setChangeBallOn(changeBallOn - 10)}>-10</button> */}
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>

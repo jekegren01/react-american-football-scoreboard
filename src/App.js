@@ -3,6 +3,7 @@ import React from "react";
 import BottomRow from "./BottomRow";
 import "./App.css";
 import { useState, useEffect } from "react";
+import Timer from "./timer";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -22,7 +23,8 @@ function App() {
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
             <div className="home__score"><span>{hScore}</span></div>
           </div>
-          <div className="timer">15:00</div>
+          <Timer />
+          {/* <div className="timer">15:00</div> */}
         
           <div className="away">
             <h2 className="away__name">Tigers</h2>
