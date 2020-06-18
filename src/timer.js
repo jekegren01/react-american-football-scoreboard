@@ -34,8 +34,7 @@ function Timer() {
                 <button className="buttons" onClick={() => newSeconds(seconds - 1)}>-1 sec</button>
               </div>
         </div>
-    );
-    
+    ); 
   }
 
   export default Timer;
