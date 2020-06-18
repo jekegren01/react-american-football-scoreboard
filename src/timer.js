@@ -25,8 +25,14 @@ function Timer() {
     return (
         <div>
             <div className="timer">{minutes}:{seconds<10?(`0${seconds}`) : seconds }</div>
-             <button className="buttons" onClick={() => setTimerOn(timerOn == !setTimerOn)}> Start/Stop </button>
-             <button className="buttons" onClick={() => (newMinutes(15), newSeconds(0))}>Reset</button>
+              <div className="ballchange">
+                <button className="buttons" onClick={() => setTimerOn(timerOn == !setTimerOn)}> Start/Stop </button>
+                <button className="buttons" onClick={() => (newMinutes(15), newSeconds(0))}>Reset</button>
+              </div>
+              <div className="ballchange">
+                <button className="buttons" onClick={() => newSeconds(seconds + 1)}>+1 sec</button>
+                <button className="buttons" onClick={() => newSeconds(seconds - 1)}>-1 sec</button>
+              </div>
         </div>
     );
   }
